@@ -1,0 +1,40 @@
+int btn1; 
+
+void setup() {
+  pinMode(9, OUTPUT);
+  digitalWrite(9, HIGH);
+
+  pinMode(10, OUTPUT);
+  digitalWrite(10, HIGH);
+
+  pinMode(13, OUTPUT);
+  digitalWrite(13, LOW);
+
+  pinMode(2, INPUT);
+
+}
+
+void loop() 
+{
+  btn1 = digitalRead(2);
+  if (btn1 == LOW)
+  {
+    digitalWrite(9, LOW);
+    delay(500);
+    digitalWrite(9, HIGH);
+    digitalWrite(10, LOW);
+    delay(100);
+    digitalWrite(10, HIGH);
+    delay(100);
+    digitalWrite(10, LOW);
+    delay(100);
+    digitalWrite(10, HIGH);
+
+  }
+  else 
+  {
+    return 0;
+    }
+  
+
+}
